@@ -5,12 +5,21 @@ public class Quest{
     private Dialogue dialogue;
     private Option[] options;
 
+//#region CONSTRUCTORS
     public Quest(String initTitle, String initText, Option[] initOptions){
         title = initTitle;
         text = initText;
         options = initOptions;
     }
 
+
+    public Quest(String initTitle, String initText, Option initOption){
+        title = initTitle;
+        text = initText;
+        options = new Option[1];
+        options[0] = initOption;
+    }
+//#endregion
     public String toString(){
         String questString;
         questString = title + "\n" + text;
